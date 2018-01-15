@@ -1,6 +1,6 @@
 require 'bundler'
 Bundler.require
-require_relative '/generator.rb'
+require_relative './generator.rb'
 class MyApp < Sinatra::Base
 
   get '/' do
@@ -12,12 +12,20 @@ get '/input' do
   erb :input
 end
 
+# post '/getstory' do
+#     info = params[:input]
+#     @name = story(info)[:name]
+#     @book = story(info)[:book]
+#     @color = story(info)[:color]
+#     @car = story(info)[:car]
+#     erb :results
+# end
+
 post '/getstory' do
-    info = params[:input]
-    @name = story(info)[:name]
-    @book = story(info)[:book]
-    @color = story(info)[:color]
-    @car = story(info)[:car]
+    @name = params[:name]
+    @book = params[:book]
+    @color = params[:color]
+    @car = params[:car]
     erb :results
 end
 

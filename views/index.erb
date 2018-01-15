@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     
     <!-- Our CSS -->
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
     
-    <script src="/jquery.style-my-tooltips.js"></script>
+    <script src="style-my-tooltips.js"></script>
     <script>
     (function($){
     $(document).ready(function(){
@@ -49,27 +49,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="questions col-md-6">
-                <form action="/getstory" method="post">
-                    <div class="question">
-                        What is your name?
-                        <input type="text" name="name">
-                    </div>
-                    <div class="question">
-                        What the last book you read?
-                        <input type="text" name="book">
-                    </div>
-                    <div class="question">
-                        What is your favorite color?
-                        <input type="text" name="color">
-                    </div>
-                    <div class="question">
-                        What is your favorite car?
-                        <input type="text" name="car">
-                    </div>
-                    <input type="submit" class="submit">
-                </form>
-            </div>
+            <a href="/input">Generator</a>
         </div>
     </div>
 </body>
