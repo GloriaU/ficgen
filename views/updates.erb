@@ -57,6 +57,19 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+    $(document).ready(function(){
+        $('.showall').on('click', function(e) {
+            $('article').show(700);
+        });
+        $('.webupdateshow').on('click', function(e) {
+            $('article').show().filter(':not(.webupdate)').hide(700);
+        });
+        $('.storyupdateshow').on('click', function(e) {
+            $('article').show().filter(':not(.storyupdate)').hide(700);
+        });
+    });
+</script>
 
 </head>
 
@@ -94,26 +107,27 @@ $(document).ready(function(){
             <div class="col-sm-2"></div>
             <div class="col-sm-2">
                 <ul class="sidenav">
-                    <li><a href="#">Wesite Updates</a></li> <!-- Filter jqu -->
-                    <li><a href="#">Story Releases</a></li>
+                    <li><a href="#" class="showall">All Updates</a></li>
+                    <li><a href="#" class="webupdateshow">Wesite Updates</a></li> <!-- Filter jqu -->
+                    <li><a href="#" class="storyupdateshow">Story Releases</a></li>
                 </ul>
             </div>
-            <div class="col-sm-4">
-                <article class="storyupdate">
+            <div id="updates" class="col-sm-4">
+                <article class="update storyupdate">
                     <div class="topinfo">
                         Jan 31, 2018
                     </div>
                     <header><h2>Added 2 stories!!!</h2></header>
                     I added two stories today!
                 </article>
-                <article class="webupdate">
+                <article class="update webupdate">
                     <div class="topinfo">
                         Jan 31, 2018
                     </div>
                     <header><h2>Web Launch!!!</h2></header>
                     I launched this website today, ......!
                 </article>
-                <article class="webupdate">
+                <article class="update webupdate">
                     <div class="topinfo">
                         Jan 8, 2018
                     </div>

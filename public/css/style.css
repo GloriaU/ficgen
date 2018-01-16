@@ -250,6 +250,8 @@ a:hover {
   text-align:left;
 }
 
+/* INDEX */
+
 .sidenav {
   list-style-type:none;
 }
@@ -258,6 +260,46 @@ a:hover {
   font-size:1.2em;
   margin-bottom:1em;
 }
+
+/* INPUT */
+
+form {
+  width: 100%;
+}
+
+.question {
+  margin-bottom:20px;
+}
+
+form input {
+  width: 100%;
+  display: block;
+  border: 1px solid #2B3227;
+  height: 25px;
+}
+
+.submit {
+  width:100px;
+  position: absolute;
+  padding:0px;
+  background: #66736A;
+  color: #fff;
+  height:30px;
+  line-height:30px;
+  border-radius: 10px;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}
+
+.submit:hover {
+  background:#91A8A8;
+}
+
+
+/* UPDATES */
 
 article {
   box-sizing:border-box;
