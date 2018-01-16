@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Generator</title>
+    <title>FICgen</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     
     <!-- Our CSS -->
-    <link href="public/css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,7 +30,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
     
-    <script src="public/css/style-my-tooltips.js"></script>
+    <script src="css/style-my-tooltips.js"></script>
     <script>
     (function($){
     $(document).ready(function(){
@@ -43,15 +43,57 @@
     });
     })(jQuery);
     </script>
+    
+        <script>
+$(document).ready(function(){
+    $('.hamburger').on('click', function(e) {
+        $(this).toggleClass("is-active");
+        $('#nav').toggleClass("open");//you can list several class names
+      e.preventDefault();
+    });
+});
+</script>
 
 </head>
 
 <body>
-    
-        <div class="col-md-6">
-            <div class="result">
-                <div>My name is <%=@name%>. I read <%=@book%>. My favorite color is <%=@color%>. I drive a <%=@car%>.</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="logo" class="col-md-6">
+                <a href="/">FICgen</a>
+            </div>
+            <div id="nav" class="col-md-6">
+                <ul>
+                    <li class="col-md-3">
+                        <a href="/input">generate</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/updates">Updates</a>
+                    </li>
+                </ul>
+            </div> <!-- nav -->
+            <div id="opennav">
+                <div class="hamburger hamburger--spin">
+                    <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                     </div>
+                </div>
+            </div> <!-- opennav -->
+        </div>
+        <div id="guts" class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <article>
+                    <header><h2><%=@title%></h2></header>
+                    <div><%=@part1%> <%=@name%>. <%=@part2%> <%=@book%>. <%=@part3%> <%=@color%>. <%=@part4%> <%=@car%>.</div>
+                </div>
             </div>
         </div>
-    
+    </div>
 </body>

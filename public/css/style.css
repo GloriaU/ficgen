@@ -298,6 +298,15 @@ form input {
   background:#91A8A8;
 }
 
+/* FAQ */
+
+blockquote {
+    border-left:2px solid #2B3227;
+    background:#9E9A95;
+    margin:10px 0px 10px 00px;
+    padding:10px 10px 10px 20px;
+}
+
 
 /* UPDATES */
 

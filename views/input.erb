@@ -90,6 +90,13 @@ $(document).ready(function(){
             <div class="col-md-4"></div>
             <div class="questions col-md-4">
                 <form action="/getstory" method="post">
+                    <select name="template">
+                        <option value="adventure">The Harrowing Adventures Of...</option>
+                        <option value="sci_fi">Heaven on Mars</option>
+                        <option value="angst">Forget About Me</option>
+                        <option value="fantasy">Open Your Eyes</option>
+                        <option value="contempory">California Love</option>
+                    </select>
                     <div class="question">
                         What is your name?
                         <input type="text" name="name">
