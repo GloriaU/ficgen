@@ -11,16 +11,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Generator</title>
+    <title>FicGen</title>
+    
+    <!-- JQ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     
     <!-- Our CSS -->
-    <link href="/css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,7 +33,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
     
-    <script src="/css/style-my-tooltips.js"></script>
+    <script src="css/style-my-tooltips.js"></script>
     <script>
     (function($){
     $(document).ready(function(){
@@ -44,7 +47,7 @@
     })(jQuery);
     </script>
     
-        <script>
+    <script>
 $(document).ready(function(){
     $('.hamburger').on('click', function(e) {
         $(this).toggleClass("is-active");
@@ -54,13 +57,14 @@ $(document).ready(function(){
 });
 </script>
 
+
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
             <div id="logo" class="col-md-6">
-                <a href="/">FICgen</a>
+                <a href="/">FICgen<img src="https://vectr.com/bikuai/aUOkBt0LW.svg?width=300&height=300&select=a1ohppsKFX&source=selection"></a>
             </div>
             <div id="nav" class="col-md-6">
                 <ul>
@@ -87,26 +91,35 @@ $(document).ready(function(){
             </div> <!-- opennav -->
         </div>
         <div id="guts" class="row">
-            <div class="questions col-md-6">
-                <form action="/getstory" method="post">
-                    <div class="question">
-                        What is your name?
-                        <input type="text" name="name">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2">
+                <ul class="sidenav">
+                    <li><a href="#">Wesite Updates</a></li> <!-- Filter jqu -->
+                    <li><a href="#">Story Releases</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <article class="storyupdate">
+                    <div class="topinfo">
+                        Jan 31, 2018
                     </div>
-                    <div class="question">
-                        What the last book you read?
-                        <input type="text" name="book">
+                    <header><h2>Added 2 stories!!!</h2></header>
+                    I added two stories today!
+                </article>
+                <article class="webupdate">
+                    <div class="topinfo">
+                        Jan 31, 2018
                     </div>
-                    <div class="question">
-                        What is your favorite color?
-                        <input type="text" name="color">
+                    <header><h2>Web Launch!!!</h2></header>
+                    I launched this website today, ......!
+                </article>
+                <article class="webupdate">
+                    <div class="topinfo">
+                        Jan 8, 2018
                     </div>
-                    <div class="question">
-                        What is your favorite car?
-                        <input type="text" name="car">
-                    </div>
-                    <input type="submit" class="submit">
-                </form>
+                    <header><h2>Project FicGen</h2></header>
+                    I started working on this project because I was unsatisfied with the generators already in existence. I don't know when this will be fully functional, but I hope it will be soon. 
+                </article>
             </div>
         </div>
     </div>

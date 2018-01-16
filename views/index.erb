@@ -11,7 +11,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Generator</title>
+    <title>FicGen</title>
+    
+    <!-- JQ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,18 +46,60 @@
     });
     })(jQuery);
     </script>
+    
+    <script>
+$(document).ready(function(){
+    $('.hamburger').on('click', function(e) {
+        $(this).toggleClass("is-active");
+        $('#nav').toggleClass("open");//you can list several class names
+      e.preventDefault();
+    });
+});
+</script>
+
 
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div id="logo">
-                <a href="/">FICgen</a>
+            <div id="logo" class="col-md-6">
+                <a href="/">FICgen<img src="https://vectr.com/bikuai/aUOkBt0LW.svg?width=300&height=300&select=a1ohppsKFX&source=selection"></a>
             </div>
+            <div id="nav" class="col-md-6">
+                <ul>
+                    <li class="col-md-3">
+                        <a href="/input">generate</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/about">About</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a href="/updates">Updates</a>
+                    </li>
+                </ul>
+            </div> <!-- nav -->
+            <div id="opennav">
+                <div class="hamburger hamburger--spin">
+                    <div class="hamburger-box">
+                          <div class="hamburger-inner"></div>
+                     </div>
+                </div>
+            </div> <!-- opennav -->
         </div>
-        <div class="row">
-            <a href="/input">Generator</a>
+        <div id="guts" class="row">
+            <div class="col-sm-3">
+                <ul class="sidenav">
+                    <li><a href="#how-to">Getting Started</a></li>
+                    <li><a href="#more">More</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
+                Finally, a webapp that takes user inputs and creates a story! FicGen was made with readers in mind and allows for easy creation of prompts and short stories. In addition, there are also ways to get involved with this project and improve it, which can be found on the <a href="/updates">Updates Page</a>.
+            </div>
         </div>
     </div>
 </body>

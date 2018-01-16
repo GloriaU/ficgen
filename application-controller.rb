@@ -12,6 +12,10 @@ get '/input' do
   erb :input
 end
 
+get '/updates' do 
+  erb :updates
+end
+
 # post '/getstory' do
 #     info = params[:input]
 #     @name = story(info)[:name]
