@@ -1,1 +1,1 @@
-bundle exec rackup config.ru -p $PORT
+bundle exec rackup config.ru -p $PORT -o $IP

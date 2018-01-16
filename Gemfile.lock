@@ -24,6 +24,7 @@ PLATFORMS
 
 DEPENDENCIES
   pry
+  rack
   shotgun
   sinatra
 
