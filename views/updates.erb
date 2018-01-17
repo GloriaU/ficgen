@@ -61,12 +61,18 @@ $(document).ready(function(){
     $(document).ready(function(){
         $('.showall').on('click', function(e) {
             $('article').show(700);
+            $('.active').removeClass("active");
+            $(this).addClass("active");
         });
         $('.webupdateshow').on('click', function(e) {
             $('article').show().filter(':not(.webupdate)').hide(700);
+            $('.active').removeClass("active");
+            $(this).addClass("active");
         });
         $('.storyupdateshow').on('click', function(e) {
             $('article').show().filter(':not(.storyupdate)').hide(700);
+            $('.active').removeClass("active");
+            $(this).addClass("active");
         });
     });
 </script>
@@ -104,36 +110,39 @@ $(document).ready(function(){
             </div> <!-- opennav -->
         </div>
         <div id="guts" class="row">
-            <div class="col-md-1 col-lg-2"></div>
-            <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                <ul class="sidenav">
-                    <li><a href="#" class="showall">All Updates</a></li>
-                    <li><a href="#" class="webupdateshow">Wesite Updates</a></li> <!-- Filter jqu -->
-                    <li><a href="#" class="storyupdateshow">Story Releases</a></li>
-                </ul>
+            <div class="col-xs-12 col-sm-4 col-md-2 col-md-offset-2 col-lg-2 col-lg-offset-2">
+                <div class="column-box">
+                    <ul class="sidenav">
+                        <li><a href="#" class="showall active">All Updates</a></li>
+                        <li><a href="#" class="webupdateshow">Wesite Updates</a></li> <!-- Filter jqu -->
+                        <li><a href="#" class="storyupdateshow">Story Releases</a></li>
+                    </ul>
+                </div>
             </div>
             <div id="updates" class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
-                <article class="update storyupdate">
-                    <div class="topinfo">
-                        Jan 31, 2018
-                    </div>
-                    <header><h2>Added 2 stories!!!</h2></header>
-                    I added two stories today!
-                </article>
-                <article class="update webupdate">
-                    <div class="topinfo">
-                        Jan 31, 2018
-                    </div>
-                    <header><h2>Web Launch!!!</h2></header>
-                    I launched this website today, ......!
-                </article>
-                <article class="update webupdate">
-                    <div class="topinfo">
-                        Jan 8, 2018
-                    </div>
-                    <header><h2>Project FicGen</h2></header>
-                    I started working on this project because I was unsatisfied with the generators already in existence. I don't know when this will be fully functional, but I hope it will be soon. 
-                </article>
+                <div class="column-box">
+                    <article class="update storyupdate">
+                        <div class="topinfo">
+                            Jan 31, 2018
+                        </div>
+                        <header><h2>Added 2 stories!!!</h2></header>
+                        I added two stories today!
+                    </article>
+                    <article class="update webupdate">
+                        <div class="topinfo">
+                            Jan 31, 2018
+                        </div>
+                        <header><h2>Web Launch!!!</h2></header>
+                        I launched this website today, ......!
+                    </article>
+                    <article class="update webupdate">
+                        <div class="topinfo">
+                            Jan 8, 2018
+                        </div>
+                        <header><h2>Project FicGen</h2></header>
+                        I started working on this project because I was unsatisfied with the generators already in existence. I don't know when this will be fully functional, but I hope it will be soon. 
+                    </article>
+                </div>
             </div>
         </div>
     </div>

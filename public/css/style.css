@@ -76,9 +76,11 @@ a {
   transition: all .4s;
 }
 
-a:hover, a:active {
+a:hover, a:visited, a:focus, a:link {
   color: #978D6C;
-  text-decoration: none;
+  text-decoration:none;
+  box-shadow:none;
+  outline:0px;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
@@ -108,13 +110,14 @@ a:hover, a:active {
   display:none;
 }
 
-.row:first-of-type a {
+.row:first-of-type a, .row:first-of-type a:link, .row:first-of-type a:visited {
   color: #91A8A8;
   font-weight: bold;
 }
 
-.row:first-of-type a:hover {
+.row:first-of-type a:hover, .row:first-of-type a:active {
   color:#D1D3CD;
+  text-decoration:none;
 }
 
 #nav ul {
@@ -126,9 +129,6 @@ a:hover, a:active {
   margin:0px;
   padding:0px;
 }
-
-/*#nav ul li {*/
-/*}*/
 
 #nav ul li a {
   font-weight:400;
@@ -253,14 +253,15 @@ a:hover, a:active {
 
 
 #guts {
-  padding:40px 15px;
+  padding:0px 15px;
+  padding-bottom:40px;
   text-align:left;
 }
 
 /* INDEX */
 
-.text {
-  max-width:60vw;
+.column-box {
+  margin-top:40px;
 }
 
 .sidenav {
@@ -274,6 +275,27 @@ a:hover, a:active {
   margin-bottom:1em;
 }
 
+.active {
+  border-left:4px solid #2B3227;
+  padding-left:10px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    text-align:center;
+  }
+  .sidenav li {
+    display:inline-block;
+    margin:0px 1em 1em 1em;
+  }
+  .active {
+    border:0px;
+    border-bottom:4px solid #2B3227;
+    padding:0px;
+    padding-bottom:10px;
+  }
+}
+
 /* INPUT */
 
 form {
@@ -282,6 +304,10 @@ form {
 
 .question {
   margin-bottom:20px;
+}
+
+select {
+  width:100%;
 }
 
 form input {
@@ -345,4 +371,13 @@ article {
 
 h1, h2, h3 {
   margin-top:10px;
+}
+
+.footer {
+  min-height:7.5vh;
+  width:100vw;
+  background: #6E6A65;
+  color:#D1D3CD;
+  text-align:center;
+  line-height:7.5vh;
 }

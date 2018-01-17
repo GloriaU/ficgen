@@ -11,7 +11,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Generator</title>
+    <title>FicGen</title>
+    
+    <!-- JQ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -87,34 +90,38 @@ $(document).ready(function(){
             </div> <!-- opennav -->
         </div>
         <div id="guts" class="row">
-            <div class="col-md-4"></div>
-            <div class="questions col-md-4">
-                <form action="/getstory" method="post">
-                    <select name="template">
-                        <option value="adventure">The Harrowing Adventures Of...</option>
-                        <option value="sci_fi">Heaven on Mars</option>
-                        <option value="angst">Forget About Me</option>
-                        <option value="fantasy">Open Your Eyes</option>
-                        <option value="contempory">California Love</option>
-                    </select>
-                    <div class="question">
-                        What is your name?
-                        <input type="text" name="name">
-                    </div>
-                    <div class="question">
-                        What the last book you read?
-                        <input type="text" name="book">
-                    </div>
-                    <div class="question">
-                        What is your favorite color?
-                        <input type="text" name="color">
-                    </div>
-                    <div class="question">
-                        What is your favorite car?
-                        <input type="text" name="car">
-                    </div>
-                    <input type="submit" class="submit">
-                </form>
+            <div class="questions col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                <div class="column-box">
+                    <form action="/getstory" method="post">
+                        <div class="question">
+                            Choose a Story
+                            <select name="template">
+                                <option value="adventure">The Harrowing Adventures Of...</option>
+                                <option value="sci_fi">Heaven on Mars</option>
+                                <option value="angst">Forget About Me</option>
+                                <option value="fantasy">Open Your Eyes</option>
+                                <option value="contempory">California Love</option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            What is your name?
+                            <input type="text" name="name">
+                        </div>
+                        <div class="question">
+                            What the last book you read?
+                            <input type="text" name="book">
+                        </div>
+                        <div class="question">
+                            What is your favorite color?
+                            <input type="text" name="color">
+                        </div>
+                        <div class="question">
+                            What is your favorite car?
+                            <input type="text" name="car">
+                        </div>
+                        <input type="submit" class="submit">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

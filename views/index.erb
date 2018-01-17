@@ -57,6 +57,29 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+var $root = $('html, body');
+    $(document).ready(function(){
+        $('.how-to').on('click', function(e) {
+            $('.active').removeClass("active");
+            $(this).addClass("active");
+            $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+        });
+        
+        $('.more').on('click', function(e) {
+            $('.active').removeClass("active");
+            $(this).addClass("active");
+            $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+        });
+    });
+</script>
+
 
 </head>
 
@@ -91,16 +114,36 @@ $(document).ready(function(){
             </div> <!-- opennav -->
         </div> <!-- row -->
         <div id="guts" class="row">
-            <div class="col-xs-12 col-sm-8 col-md-6">
-                Finally, a webapp that takes user inputs and creates a story! FicGen was made with readers in mind and allows for easy creation of prompts and short stories. In addition, there are also ways to get involved with this project and improve it, which can be found on the <a href="/updates">Updates Page</a>.
+            <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-6 col-md-offset-2">
+                <div class="column-box">
+                    Finally, a webapp that takes user inputs and creates a story! FicGen was made with readers in mind and allows for easy creation of prompts and short stories. In addition, there are also ways to get involved with this project and improve it, which can be found on the <a href="/updates">Updates Page</a>.
+                </div>
             </div>
-            <div class="col-sm-1 col-md-1"></div>
-            <div class="col-xs-12 col-sm-3 col-md-3">
-                <ul class="sidenav">
-                    <li><a href="#how-to">Getting Started</a></li>
-                    <li><a href="#more">More</a></li>
-                </ul>
+            <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1">
+                <div class="column-box">
+                    <ul class="sidenav">
+                        <li><a href="#how-to" class="how-to active">Getting Started</a></li>
+                        <li><a href="#more" class="more">More</a></li>
+                    </ul>
+                </div>
             </div>
+            <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-6 col-md-offset-2">
+                <div class="column-box">
+                    <a href="#how-to" id="how-to"><h1>Getting Started</h1></a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus sed quam finibus fermentum. Curabitur lectus justo, viverra at turpis sit amet, tempor mollis sem. Pellentesque tortor ante, commodo a egestas vitae, accumsan quis sem. Duis varius ac massa a pellentesque. Aliquam quis arcu rutrum, hendrerit sem faucibus, bibendum eros. Aliquam quis molestie orci. Mauris in urna a lorem luctus lobortis. Praesent ut arcu rhoncus, pellentesque dolor eu, sodales odio. Mauris vehicula est non mauris malesuada venenatis. Pellentesque condimentum quam ut placerat consequat. In ac velit justo. Proin ac odio elit. Donec a ligula at lacus egestas gravida. Quisque sed lacinia est, vel finibus tortor. Vivamus id scelerisque felis, a laoreet magna. Aliquam eu finibus neque, nec malesuada magna. Aliquam purus enim, vehicula sit amet enim quis, blandit aliquet lectus. Fusce ex est, tempor placerat faucibus quis, consectetur et orci. Pellentesque quis lacus ac metus efficitur consectetur nec ac erat. Proin sit amet ultricies ipsum. Vestibulum nec nunc pretium libero varius molestie id sit amet turpis. Pellentesque eros purus, convallis ultricies volutpat sed, pharetra nec arcu.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus sed quam finibus fermentum. Curabitur lectus justo, viverra at turpis sit amet, tempor mollis sem. Pellentesque tortor ante, commodo a egestas vitae, accumsan quis sem. Duis varius ac massa a pellentesque. Aliquam quis arcu rutrum, hendrerit sem faucibus, bibendum eros. Aliquam quis molestie orci. Mauris in urna a lorem luctus lobortis. Praesent ut arcu rhoncus, pellentesque dolor eu, sodales odio. Mauris vehicula est non mauris malesuada venenatis. Pellentesque condimentum quam ut placerat consequat. In ac velit justo. Proin ac odio elit. Donec a ligula at lacus egestas gravida. Quisque sed lacinia est, vel finibus tortor. Vivamus id scelerisque felis, a laoreet magna. Aliquam eu finibus neque, nec malesuada magna. Aliquam purus enim, vehicula sit amet enim quis, blandit aliquet lectus. Fusce ex est, tempor placerat faucibus quis, consectetur et orci. Pellentesque quis lacus ac metus efficitur consectetur nec ac erat. Proin sit amet ultricies ipsum. Vestibulum nec nunc pretium libero varius molestie id sit amet turpis. Pellentesque eros purus, convallis ultricies volutpat sed, pharetra nec arcu.</p>
+                    <a href="#more" id="more"><h1>More</h1></a>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus sed quam finibus fermentum. Curabitur lectus justo, viverra at turpis sit amet, tempor mollis sem. Pellentesque tortor ante, commodo a egestas vitae, accumsan quis sem. Duis varius ac massa a pellentesque. Aliquam quis arcu rutrum, hendrerit sem faucibus, bibendum eros. Aliquam quis molestie orci. Mauris in urna a lorem luctus lobortis. Praesent ut arcu rhoncus, pellentesque dolor eu, sodales odio. Mauris vehicula est non mauris malesuada venenatis. Pellentesque condimentum quam ut placerat consequat. In ac velit justo. Proin ac odio elit. Donec a ligula at lacus egestas gravida. Quisque sed lacinia est, vel finibus tortor. Vivamus id scelerisque felis, a laoreet magna. Aliquam eu finibus neque, nec malesuada magna. Aliquam purus enim, vehicula sit amet enim quis, blandit aliquet lectus. Fusce ex est, tempor placerat faucibus quis, consectetur et orci. Pellentesque quis lacus ac metus efficitur consectetur nec ac erat. Proin sit amet ultricies ipsum. Vestibulum nec nunc pretium libero varius molestie id sit amet turpis. Pellentesque eros purus, convallis ultricies volutpat sed, pharetra nec arcu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="col-sm-6">&copy; FicGen 2018</div>
+            <div class="col-sm-6">To Fic Or Not To Fic</div>
         </div>
     </div>
 </body>
