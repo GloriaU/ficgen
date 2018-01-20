@@ -7,7 +7,6 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
-
 get '/input' do
   erb :input
 end
@@ -23,6 +22,8 @@ end
 get '/faq' do 
   erb :faq
 end
+
+# lets see if i can just post the story then have java or something replace all the inserts in the story like replacing "y/n" on UltraVioletSoul's post about Salen and the arranged marriage and all that jazz yknow
 
 post '/getstory' do
     tem = params[:template]
