@@ -1,0 +1,150 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Subway Map</title>
+    
+    <!-- JQ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="css/mapmaker.js"></script>
+    
+    
+    <style>
+    @font-face {
+      font-family: 'Pixel';
+      src: url('css/PixelOperator8.ttf') format('truetype'); /* IE9 Compat Modes */
+    }
+    
+        body
+    {
+        font-family: "Pixel";
+        font-size: 16px;
+        color:#FF0000;
+    }
+    /* The main DIV for the map */
+    .subway-map
+    {
+        margin: auto;
+        width: 920px;
+        height:500px;
+        background-color:#f0f0f0;
+        color:#ff0000;
+        background:url("css/map background.png");
+    }
+    /* Text labels */
+    .text
+    {
+        text-decoration: none;
+        color:#000;
+    }
+    #legend
+    {
+        float: left;
+        width: 250px;
+        height:400px;
+    }
+    #legend div
+    {
+        height: 25px;
+    }
+    #legend span
+    {
+        margin: 5px 5px 5px 0;
+    }
+    .subway-map span
+    {
+        margin: 5px 5px 5px 0;
+    }
+ 
+    </style>
+    
+</head>
+<body>
+    <div class="subway-map" data-columns="38" data-rows="21" data-cellSize="24" data-legendId="legend" data-textClass="text" data-gridNumbers="false" data-grid="false" data-lineWidth="6">
+        
+        <ul data-color="#008800" data-label="Route Four-0" data-shiftCoords="0,0">
+            <li data-coords="15,2" data-marker="interchange" data-labelpos="NE"><a href="/" title="One Stop">North Metrub'an</a></li>
+            <li data-coords="18,7"></li>
+        </ul>
+        
+        <ul data-color="#00cc00" data-label="Route Four-1" data-shiftCoords="-1,0">
+            <li data-coords="23,1" data-marker="interchange" data-labelpos="SE"><a href="/" title="One Stop">Exurbia</a></li>
+            <li data-coords="18,7" data-marker="interchange" data-labelpos="E">Office</li>
+            <li data-coords="20,10"></li>
+            <li data-coords="19,11" data-dir="S"></li>
+            <li data-coords="18,11"></li>
+            <li data-coords="16,13"></li>
+            <li data-coords="15,13"></li>
+            <li data-coords="12,14"></li>
+            <li data-coords="9,15" data-marker="interchange" data-labelpos="S">Gates</li>
+        </ul>
+
+        <ul data-color="#FF0000" data-label="Route One">
+            <li data-coords="4,6" data-marker="interchange"><a href="/" title="One Stop">Home</a></li>
+            <li data-coords="5,6"></li>
+            <li data-coords="6,5" data-dir="E"></li>
+            <li data-coords="6,5"></li>
+            <li data-coords="7,4" data-dir="N"></li>
+            <li data-coords="11,4"></li>
+            <li data-coords="12,4"></li>
+            <li data-coords="15,7"></li>
+            <li data-coords="17,7"></li>
+            <li data-coords="19,10"></li>
+            <li data-coords="19,10" data-marker="@interchange" data-markerinfo="h3" data-labelpos="W">CBD</li>
+            <li data-coords="20,11" data-dir="E"></li>
+            <li data-coords="18,19"></li>
+            <li data-coords="20,22"></li>
+        </ul>
+        
+        <ul data-color="#bb0000" data-label="Route One-0" data-shiftCoords="-1,0">
+            <li data-coords="18.875,16" data-marker="interchange" data-labelpos="E"><a href="/" title="One Stop">South Metrub'an</a></li>
+            <li data-coords="14,16"></li>
+            <li data-coords="12,18"></li>
+            <li data-coords="8,18"></li>
+            <li data-coords="4,22"></li>
+        </ul>
+        
+        <ul data-color="#888" data-label="Route Two" data-shiftCoords="1,0">
+            <li data-coords="28,3" data-marker="interchange" data-labelpos="E"><a href="/" title="One Stop">Forest</a></li>
+            <li data-coords="28,5"></li>
+            <li data-coords="27,6" data-dir="S"></li>
+            <li data-coords="24.5,6"></li>
+            <li data-coords="21,9"></li>
+            <li data-coords="20,11" data-dir="W"></li>
+            <li data-coords="19.5,11" data-marker="@interchange" data-markerinfo="h3" data-labelpos="SE">Metrub'an</li>
+            <li data-coords="18.975,15"></li>
+            <li data-coords="24,15"></li>
+            <li data-coords="27,12"></li>
+            <li data-coords="30,13"></li>
+            <li data-coords="33,10"></li>
+            <li data-coords="35,11" data-marker="interchange" data-labelpos="S">Entrepôt</li>
+        </ul>
+
+        <ul data-color="#959595" data-label="Route Three" data-shiftCoords="-1,0">
+            <li data-coords="7,8" data-marker="interchange" data-labelpos="SW"><a href="/" title="One Stop">East Sub'an</a></li>
+            <li data-coords="9,9"></li>
+            <li data-coords="13,9"></li>
+            <li data-coords="15,7" data-dir="E"></li>
+            <li data-coords="17,7"></li>
+            <li data-coords="19,10"></li>
+            <li data-coords="20,11" data-dir="E"></li>
+            <li data-coords="19.25,14"></li>
+            <li data-coords="16,14"></li>
+            <li data-coords="14,15"></li>
+            <li data-coords="7,15"></li>
+            <li data-coords="5,13"></li>
+            <li data-coords="3,13"></li>
+            <li data-coords="2,14" data-dir="W"></li>
+            <li data-coords="1,15" data-dir="S"></li>
+            <li data-coords="0,15" data-dir="W"></li>
+        </ul>
+    
+
+    </div>
+    <div id="legend"></div>
+    
+
+    <script type="text/javascript">
+        $(".subway-map").subwayMap({ debug: true });
+    </script>
+</body>
+</html>

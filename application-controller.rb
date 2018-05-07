@@ -23,6 +23,10 @@ get '/faq' do
   erb :faq
 end
 
+get '/map' do 
+  erb :map
+end
+
 # lets see if i can just post the story then have java or something replace all the inserts in the story like replacing "y/n" on UltraVioletSoul's post about Salen and the arranged marriage and all that jazz yknow
 
 post '/getstory' do
